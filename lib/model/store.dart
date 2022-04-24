@@ -4,8 +4,11 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class StoreController extends GetxController {
-  var index = 0.obs;
-  updateIndex(int i) => index.value = i;
+  var pageIndex = 0.obs;
+  updatePageIndex(int i) => pageIndex.value = i;
+
+  var examinationDate = DateTime.now().obs;
+  setExaminationDate(date) => examinationDate.value = date;
 }
 
 class ProgController extends GetxController {
